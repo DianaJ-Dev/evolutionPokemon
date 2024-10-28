@@ -1,66 +1,61 @@
-# @semillero/evolution-pokemones
+# Evolution Pokémon UI
 
-## Package info
+## Descripción
 
-### Package installation
+**Evolution Pokémon UI** es un componente de interfaz de usuario que permite visualizar las evoluciones de un Pokémon. Este componente consume el componente **evolution-pokemones-dm** para obtener datos de Pokémon desde la API de [PokeAPI](https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/id.png) y mostrar sus evoluciones de manera atractiva.
 
-Installation using NPM
+> Nota: Reemplaza `id` en la URL de la imagen con el ID del Pokémon correspondiente.
 
-```bash
-npm install @semillero/evolution-pokemones
-```
+## Características
 
-### Entry points & exports
+- Muestra el nombre y la imagen del Pokémon seleccionado.
+- Presenta una lista de evoluciones con imágenes.
+- Botón para obtener más información sobre cada evolución.
 
-- (Default entry point)
-  - EvolutionPokemones (Class)
-- evolution-pokemones.js
-  - evolution-pokemones (Custom Element)
+## Requisitos
 
+- Node.js
+- cells-cli
 
-## EvolutionPokemones (Class) evolution-pokemones (Custom Element) 
+## Instalación
 
-### Extends from
+1. Clona este repositorio:
+   ```bash
+   git clone https://github.com/DianaJ-Dev/evolutionPokemon
+   cd evolutionPokemon
+   ```
 
-LitElement (lit-element package)
+2. Instala las dependencias:
+    ```bash
+   npm install
+   ```
 
-### Usage
+3. Instala cells-cli globalmente si no lo tienes instalado:
+    ```bash
+    npm install -g cells-cli
+    ```
+4. Inicia la aplicación localmente:
+    ```bash
+    cells lit-component:serve
+    ```
+### Uso
 
-Import and extend the class:
+1. Añade la dependencia del componente en tu package.json:
+    ```bash
+    @semillero/evolution-pokemones": "git+https://github.com/DianaJ-Dev/evolutionPokemon.git#main
+    ```
 
-```js
-import { EvolutionPokemones } from '@semillero/evolution-pokemones';
-
-class ExampleElement extends EvolutionPokemones {
-  ...
-}
-```
-
-Use the custom element (defined globally):
-
-```js
-import '@semillero/evolution-pokemones/evolution-pokemones.js';
-```
-
-```html
-<evolution-pokemones ...>
-  ...
-</evolution-pokemones>
-```
-
-### Description
-
-![LitElement component](https://img.shields.io/badge/litElement-component-blue.svg)
-
-This component ...
-
-Example:
-
-```html
-  <evolution-pokemones></evolution-pokemones>
-```
-
-### Properties
-
-- **name**: string = "Cells" (attribute: name)
-    Description for property
+2. Instala la dependencia:
+   ```bash
+    npm install
+    ```
+3. Importa el componente en tu aplicación:
+    ```bash
+    import '@semillero/evolution-pokemones/evolution-pokemones.js'
+    ```
+4. Añade el componente a tu HTML:
+   ```bash
+    <evolution-pokemones></evolution-pokemones>
+    ```
+#### Estilos
+Puedes personalizar los estilos del componente modificando el archivo CSS correspondiente. Asegúrate de incluir el archivo de estilos en tu proyecto.    
