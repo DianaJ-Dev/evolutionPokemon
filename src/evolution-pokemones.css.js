@@ -2,7 +2,6 @@ import { css, unsafeCSS } from 'lit-element';
 import * as foundations from '@bbva-web-components/bbva-foundations-styles';
 
 export default css`
-@charset "UTF-8";
 .pokemon-card {
   background-color: #f9f9f9;
   border: 2px solid #ddd;
@@ -11,8 +10,8 @@ export default css`
   text-align: center;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   transition: transform 0.2s;
-  max-width: 400px; /* Limita el ancho máximo de la tarjeta */
-  margin: 20px auto; /* Centra la tarjeta horizontalmente */
+  max-width: 400px;
+  margin: 20px auto;
 }
 
 .pokemon-card:hover {
@@ -44,13 +43,30 @@ h3 {
 }
 
 .evolutions {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
   list-style: none;
-  padding: 0;
 }
 
-.evolutions li {
-  margin: 5px 0;
-  font-size: 18px;
-  color: #444;
+.cardEvolution {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  text-align: center;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s;
+  margin: 10px;
+  width: 150px;
+}
+
+.cardEvolution:hover {
+  transform: scale(1.05);
+}
+
+.cardEvolution img {
+  width: 100px;
+  height: auto;
+  margin-bottom: 10px;
 }
 `;
